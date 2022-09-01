@@ -1,0 +1,21 @@
+CREATE view_pelatihan AS SELECT
+    `latih`.`Pelatihan_ID` AS `Pelatihan_ID`,
+    `latih`.`Pelatihan_Ruang` AS `Pelatihan_Ruang`,
+    `latih`.`Pelatihan_Tanggal` AS `Pelatihan_Tanggal`,
+    `latih`.`Pelatihan_Materi` AS `Pelatihan_Materi`,
+    `guru`.`Pengajar_Name` AS `Pengajar_ID`,
+    `murid`.`Peserta_Name` AS `Peserta_ID`
+FROM
+    (
+        (
+            `db_training`.`pelatihan` `latih`
+        JOIN `db_training`.`pengajar` `guru`
+        )
+    LEFT JOIN `db_training`.`peserta` `murid`
+    ON
+        (
+            `guru`.`Pengajar_ID` = `latih`.`Pengajar_ID`
+        )
+    )
+WHERE
+    `murid`.`Peserta_ID` = `latih`.`Peserta_ID`
