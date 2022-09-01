@@ -13,7 +13,7 @@
 		<br>
 		<br>
 		<h4 align="center">
-			Berikut Ratio pengajar berdasarkan Gender
+			Berikut Current Ratio pengajar berdasarkan Gender
 		</h4>
 		<?php
 			// membuat query;

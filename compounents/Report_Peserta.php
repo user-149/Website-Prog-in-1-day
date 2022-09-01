@@ -13,7 +13,7 @@
 		<br>
 		<br>
 		<h4 align="center">
-			Berikut Ratio peserta berdasarkan Gender
+			Berikut Current Ratio peserta berdasarkan Gender
 		</h4>
 		<?php
 			// membuat query;
